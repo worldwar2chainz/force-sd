@@ -42,7 +42,7 @@ MainWindow::MainWindow(QWidget *parent) :
     if(arduino_is_available){
         //open and configure the port
         arduino -> setPortName(arduino_port_name);
-        arduino -> open(QSerialPort::WriteOnly);
+        arduino -> open(QSerialPort::ReadWrite);
         arduino->setBaudRate(QSerialPort::Baud9600);
         arduino->setDataBits(QSerialPort::Data8);
         arduino ->setParity(QSerialPort::NoParity);
@@ -67,13 +67,14 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_begin_clicked()
 {
-    MainWindow::updateGUI(QString("l"));
+    MainWindow::updateGUI(QString("f"));
+    MainWindow::readSerial();
 
 }
 
 void MainWindow::on_end_clicked()
 {
-    MainWindow::updateGUI(QString("r"));
+    MainWindow::updateGUI(QString("t"));
 
 }
 

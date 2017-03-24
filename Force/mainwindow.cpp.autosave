@@ -15,6 +15,9 @@ MainWindow::MainWindow(QWidget *parent) :
     arduino_is_available = false;
     arduino_port_name= "";
     arduino = new QSerialPort;
+    serialBuffer = "";
+    parsed_data = " ";
+    force_value = 0.0;
 
 
     qDebug() << "Number of available ports: " << QSerialPortInfo::availablePorts().length();
@@ -42,7 +45,7 @@ MainWindow::MainWindow(QWidget *parent) :
     if(arduino_is_available){
         //open and configure the port
         arduino -> setPortName(arduino_port_name);
-        arduino -> open(QSerialPort::WriteOnly);
+        arduino -> open(QSerialPort::ReadWrite);
         arduino->setBaudRate(QSerialPort::Baud9600);
         arduino->setDataBits(QSerialPort::Data8);
         arduino ->setParity(QSerialPort::NoParity);
@@ -68,6 +71,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_begin_clicked()
 {
     MainWindow::updateGUI(QString("f"));
+    MainWindow::readSerial();
 
 }
 
@@ -89,13 +93,27 @@ void MainWindow::updateGUI(QString command){
 
 void MainWindow::readSerial()
 {
+    
+    QStringList buffer_split = serialBuffer.split(",");
+    
+    if(buffer_split.length() < 3){
 
-   QByteArray grams = arduino->readAll();
-   qDebug() << grams ;
-   QString parsedForce_data = grams;
-   MainWindow::updateForce(parsedForce_data);
-   MainWindow::on_recordData_clicked(parsedForce_data);
-
+   serialData = arduino->readAll();
+   serialBuffer = serialBuffer + QString::fromStdString(serialData.toStdString());
+   serialData.clear();
+   
+    }else{
+        serialBuffer = "";
+                
+                qDebug() << buffer_split << "\n" ;
+                parsed_data = buffer_split[1];
+                force_value = (parsed_data.toDouble());
+                parsed_data = QString::number(force_value, 'g', 4);
+                MainWindow::updateForce(parsed_data);
+                MainWindow::on_recordData_clicked(parsed_data);
+        
+    }
+   
 
 }
 
