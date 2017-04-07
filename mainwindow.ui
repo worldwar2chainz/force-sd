@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>565</width>
-    <height>373</height>
+    <width>550</width>
+    <height>491</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,41 +17,77 @@
    <string notr="true">background-color: rgb(71, 94, 107);</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QSplitter" name="splitter">
+   <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>80</y>
-      <width>451</width>
-      <height>51</height>
+      <x>170</x>
+      <y>130</y>
+      <width>191</width>
+      <height>20</height>
      </rect>
     </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
+    <property name="font">
+     <font>
+      <family>Nirmala UI Semilight</family>
+      <pointsize>14</pointsize>
+     </font>
     </property>
-    <widget class="QPushButton" name="begin">
-     <property name="text">
-      <string>Begin Test</string>
-     </property>
-    </widget>
-    <widget class="QProgressBar" name="vibrationProgressBar">
-     <property name="value">
-      <number>24</number>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="end">
-     <property name="text">
-      <string>End Test</string>
-     </property>
-    </widget>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; color:#ffffff;&quot;&gt;PATIENT RESPONSE &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>350</y>
+      <width>91</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QPushButton" name="recordData">
+       <property name="text">
+        <string>Record Data</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="repeatTest">
+       <property name="text">
+        <string>Repeat Test</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>20</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nirmala UI Semilight</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600; color:#ffffff;&quot;&gt;TOUCH&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
    </widget>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>200</y>
-      <width>421</width>
-      <height>121</height>
+      <x>40</x>
+      <y>360</y>
+      <width>371</width>
+      <height>71</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -65,8 +101,8 @@
          <rect>
           <x>10</x>
           <y>20</y>
-          <width>101</width>
-          <height>71</height>
+          <width>81</width>
+          <height>42</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
@@ -97,9 +133,9 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>30</y>
-          <width>111</width>
-          <height>51</height>
+          <y>20</y>
+          <width>101</width>
+          <height>31</height>
          </rect>
         </property>
         <item>
@@ -138,8 +174,8 @@
        <widget class="QLCDNumber" name="forceNumber">
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>40</y>
+          <x>10</x>
+          <y>30</y>
           <width>64</width>
           <height>23</height>
          </rect>
@@ -162,68 +198,129 @@
      </item>
     </layout>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QPushButton" name="begin">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>150</y>
-      <width>291</width>
-      <height>41</height>
+      <x>410</x>
+      <y>70</y>
+      <width>75</width>
+      <height>23</height>
      </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Nirmala UI Semilight</family>
-      <pointsize>14</pointsize>
-     </font>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; color:#ffffff;&quot;&gt;PATIENT RESPONSE &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>Begin Test</string>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget_3">
+   <widget class="QPushButton" name="end">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>220</y>
-      <width>91</width>
-      <height>91</height>
+      <x>410</x>
+      <y>100</y>
+      <width>75</width>
+      <height>23</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
-     <item>
-      <widget class="QPushButton" name="recordData">
+    <property name="text">
+     <string>No Feel</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>70</y>
+      <width>351</width>
+      <height>47</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_3">
        <property name="text">
-        <string>Record Data</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#ffffff;&quot;&gt;Test&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </item>
-     <item>
-      <widget class="QPushButton" name="repeatTest">
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_4">
        <property name="text">
-        <string>Repeat Test</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#ffffff;&quot;&gt;Finger&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QComboBox" name="TestCombo">
+       <item>
+        <property name="text">
+         <string>Force</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Two Point Discrimination</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QComboBox" name="FingerCombo">
+       <item>
+        <property name="text">
+         <string>Thumb</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Index</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Middle</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ring</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Pinky</string>
+        </property>
+       </item>
       </widget>
      </item>
     </layout>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QCustomPlot" name="forceSensorPlot" native="true">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>20</y>
-      <width>191</width>
-      <height>31</height>
+      <x>100</x>
+      <y>160</y>
+      <width>351</width>
+      <height>171</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>Nirmala UI Semilight</family>
-      <pointsize>14</pointsize>
-     </font>
+   </widget>
+   <widget class="QDateTimeEdit" name="dateTimeEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>194</width>
+      <height>22</height>
+     </rect>
     </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600; color:#ffffff;&quot;&gt;FORCE TEST&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600; color:#ffffff;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
     </property>
    </widget>
   </widget>
@@ -232,7 +329,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>565</width>
+     <width>550</width>
      <height>21</height>
     </rect>
    </property>
@@ -248,6 +345,14 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

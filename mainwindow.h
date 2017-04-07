@@ -8,6 +8,7 @@
 #include <QtSql>
 #include <QFileInfo>
 #include <QByteArray>
+#include <qcustomplot.h>
 
 
 namespace Ui {
@@ -30,6 +31,8 @@ private slots:
     void readSerial(); //reads in and parses force data from Arduino
     void on_recordData_clicked(QString); //saves data and exports as text file
 
+    void sensorPlot();
+    void realtimeDataSlot();
 private:
     Ui::MainWindow *ui;
     QSerialPort *arduino;
@@ -41,6 +44,7 @@ private:
     QString serialBuffer; //creates a buffer for parsing data, delineated by commas
     QString parsed_data; //parsed data from force sensor
     double force_value; //the raw reading from force sensor
+
 };
 
 #endif // MAINWINDOW_H
